@@ -76,14 +76,14 @@ username=$(user)&prediction=$(1))
 Usage: !epredict 11-13
 
 ### List all predictions
-!addcom !listpredict -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/list)	
+!addcom !listpredict -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/list)
 !addcom !lpredict -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/list)	
 !addcom !lp -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/list)
 Usage: !lpredict
 
 ### Check on Prediction System status (Check for Close or Open)
-!addcom !predictstatus -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/status)	
-!addcom !spredict -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/status)	
+!addcom !predictstatus -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/status)
+!addcom !spredict -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/status)
 !addcom !sp -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/status)	
 Usage: !spredict
 
@@ -93,18 +93,18 @@ Usage: !spredict
 Usage: !addadminpredict NightBot
 
 ### Remove a Twitch Channel Prediction Admin
-!addcom !removeadminpredict -cd=5 -ul=owner $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/admin/removeAdmin?username=$(1))	
+!addcom !removeadminpredict -cd=5 -ul=owner $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/admin/removeAdmin?username=$(1))
 !addcom !remadminpredict -cd=5 -ul=owner $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/admin/removeAdmin?username=$(1))	
 Usage: !remadminpredict NightBot
 
 ### List all Twitch Channel Prediction Admins
-!addcom !listadminpredict -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/admin/list)	
-!addcom !ladminpredict $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/admin/list)	
+!addcom !listadminpredict -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/admin/list)
+!addcom !ladminpredict $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/admin/list)
 !addcom !lap $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/admin/list)
 Usage: !ladminpredict
 
 ### Force adding an user's prediction when Prediction has been closed
-!addcom !faddpredict -cd=5 -ul=owner $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/addByOwner?username=$(1)&prediction=$(2))	
+!addcom !faddpredict -cd=5 -ul=owner $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/addByOwner?username=$(1)&prediction=$(2))
 !addcom !fpredict -cd=5 -ul=owner $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/addByOwner?username=$(1)&prediction=$(2))
 Usage: !fpredict NightBot 13-9
 
@@ -114,8 +114,8 @@ Usage: !fpredict NightBot 13-9
 Usage: !fmodpredict NightBot 13-9
 
 ### Open a new prediction (WARN: Previous data will be cleared)
-!addcom !openpredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/open)	
-!addcom !opredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/open)	
+!addcom !openpredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/open)
+!addcom !opredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/open)
 !addcom !op -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/open)	
 Usage: !opredict
 
@@ -126,11 +126,11 @@ Usage: !opredict
 Usage: !cpredict
 
 ### Set result and show winners (Prediction System needs to be closed first)
-!addcom !wonpredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/result?result=$(1))	
+!addcom !wonpredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/result?result=$(1))
 !addcom !wp -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/result?result=$(1))
 !addcom !wpredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/result?result=$(1))
-!addcom !resultpredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/result?result=$(1))	
-!addcom !rpredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/result?result=$(1))		
+!addcom !resultpredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/result?result=$(1))
+!addcom !rpredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/result?result=$(1))
 !addcom !rp -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/result?result=$(1))
 Usage: !wpredict 13-10
 
