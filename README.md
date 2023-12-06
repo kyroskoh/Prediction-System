@@ -217,58 +217,58 @@ Usage: !fadminpredict NightBot 13-9
 
 ## For everyone
 ### !addpredict / !apredict / !ap
-Description: Add your prediction
+Description: Add your prediction\
 Usage: !apredict 13-11
 
 ### !editpredict / !epredict / !ep
-Description: Edit your prediction
+Description: Edit your prediction\
 Usage: !epredict 11-13
 
 ### !listpredict / !lpredict / !lp
-Description: List all predictions
+Description: List all predictions\
 Usage: !lpredict
 
 ### !predictstatus / !spredict / !sp
-Description: Check on Prediction System status (Check for Close or Open)
+Description: Check on Prediction System status (Check for Close or Open)\
 Usage: !spredict
 
 ## For Twitch Channel Owner
 ### !addadminpredict
-Description: Add a Twitch Channel Prediction Admin
+Description: Add a Twitch Channel Prediction Admin\
 Usage: !addadminpredict NightBot
 
 ### !removeadminpredict / !remadminpredict
-Description: Remove a Twitch Channel Prediction Admin
+Description: Remove a Twitch Channel Prediction Admin\
 Usage: !remadminpredict NightBot
 
 ## !listadminpredict / !ladminpredict / !lap
-Description: List all Twitch Channel Prediction Admins
+Description: List all Twitch Channel Prediction Admins\
 Usage: !ladminpredict
 
 ### !fpredict / !faddpredict
-Description: Force adding an user's prediction when Prediction has been closed
+Description: Force adding an user's prediction when Prediction has been closed\
 Usage: !fpredict NightBot 13-9
 
 ## For Twitch Channel Mods (Twitch Channel Owner can use too!)
 ### !fmodpredict
-Description: Force adding an user's prediction when Prediction has been closed
+Description: Force adding an user's prediction when Prediction has been closed\
 Usage: !fmodpredict NightBot 13-9
 
 ### !openpredict / !opredict / !op
-Description: Open a new prediction (WARN: Previous data will be cleared)
+Description: Open a new prediction (WARN: Previous data will be cleared)\
 Usage: !opredict
 
 ### !closepredict / !cpredict / !cp
-Description: Close predictions
+Description: Close predictions\
 Usage: !cpredict
 
 ### !wonpredict / !wpredict / !wp / !resultpredict / !rpredict / !rp
-Description: Set result and show winners (Prediction System needs to be closed first)
+Description: Set result and show winners (Prediction System needs to be closed first)\
 Usage: !wpredict 13-10
 
 ## For Assigned Twitch Channel Prediction Admins (No other access like Twitch Channel Mods)
 ### !fadminpredict
-Description: Force adding an user's prediction when Prediction has been closed!
+Description: Force adding an user's prediction when Prediction has been closed!\
 Usage: !fadminpredict NightBot 13-9
 
 </details>
