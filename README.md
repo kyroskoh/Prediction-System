@@ -57,86 +57,156 @@ https://www.twitch.tv/sherrng
 <summary>NightBot Commands (Add via your Twitch Chat)</summary>
 
 ## To show all the important prediction commands
-!addcom !predictcmds -cd=5 Commands for Prediction System (created by @KyrosKoh): !opredict (mod only), !apredict xx-xx, !epredict xx-xx, !lpredict, !cpredict (mod only), !wpredict xx-xx (mod only), !fpredict username xx-xx (owner only), !spredict	
+```
+!addcom !predictcmds -cd=5 Commands for Prediction System (created by @KyrosKoh): !opredict (mod only), !apredict xx-xx, !epredict xx-xx, !lpredict, !cpredict (mod only), !wpredict xx-xx (mod only), !fpredict username xx-xx (owner only), !spredict
+```
  
 ## For everyone
 ### Add your prediction
+```
 !addcom !addpredict -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/add?username=$(user)&prediction=$(1))
+```
+```
 !addcom !apredict -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/add?username=$(user)&prediction=$(1))
+```
+```
 !addcom !ap -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/add?username=$(user)&prediction=$(1))
+```
 Usage: !apredict 13-11
 
 ### Edit your prediction
+```
 !addcom !editpredict -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/edit?
 username=$(user)&prediction=$(1))
+```
+```
 !addcom !epredict -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/edit?
 username=$(user)&prediction=$(1))
+```
+```
 !addcom !ep -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/edit?
 username=$(user)&prediction=$(1))
+```
 Usage: !epredict 11-13
 
 ### List all predictions
+```
 !addcom !listpredict -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/list)
-!addcom !lpredict -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/list)	
+```
+```
+!addcom !lpredict -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/list)
+```
+```
 !addcom !lp -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/list)
+```
 Usage: !lpredict
 
 ### Check on Prediction System status (Check for Close or Open)
+```
 !addcom !predictstatus -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/status)
+```
+```
 !addcom !spredict -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/status)
-!addcom !sp -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/status)	
+```
+```
+!addcom !sp -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/status)
+```
 Usage: !spredict
 
 ## For Twitch Channel Owner
 ### Add a Twitch Channel Prediction Admin
+```
 !addcom !addadminpredict -cd=5 -ul=owner $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/admin/addAdmin?username=$(1))
+```
 Usage: !addadminpredict NightBot
 
 ### Remove a Twitch Channel Prediction Admin
+```
 !addcom !removeadminpredict -cd=5 -ul=owner $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/admin/removeAdmin?username=$(1))
-!addcom !remadminpredict -cd=5 -ul=owner $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/admin/removeAdmin?username=$(1))	
+```
+```
+!addcom !remadminpredict -cd=5 -ul=owner $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/admin/removeAdmin?username=$(1))
+```
 Usage: !remadminpredict NightBot
 
 ### List all Twitch Channel Prediction Admins
+```
 !addcom !listadminpredict -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/admin/list)
+```
+```
 !addcom !ladminpredict $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/admin/list)
+```
+```
 !addcom !lap $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/admin/list)
+```
 Usage: !ladminpredict
 
 ### Force adding an user's prediction when Prediction has been closed
+```
 !addcom !faddpredict -cd=5 -ul=owner $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/addByOwner?username=$(1)&prediction=$(2))
+```
+```
 !addcom !fpredict -cd=5 -ul=owner $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/addByOwner?username=$(1)&prediction=$(2))
+```
 Usage: !fpredict NightBot 13-9
 
 ## For Twitch Channel Mods (Twitch Channel Owner can use too!)
 ### Force adding an user's prediction when Prediction has been closed
+```
 !addcom !fmodpredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/addByMods?mods=$(user)&username=$(1)&prediction=$(2))
+```
 Usage: !fmodpredict NightBot 13-9
 
 ### Open a new prediction (WARN: Previous data will be cleared)
+```
 !addcom !openpredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/open)
+```
+```
 !addcom !opredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/open)
-!addcom !op -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/open)	
+```
+```
+!addcom !op -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/open)
+```
 Usage: !opredict
 
 ### Close predictions
+```
 !addcom !closepredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/close)
+```
+```
 !addcom !cpredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/close)
+```
+```
 !addcom !cp -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/close)
+```
 Usage: !cpredict
 
 ### Set result and show winners (Prediction System needs to be closed first)
+```
 !addcom !wonpredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/result?result=$(1))
+```
+```
 !addcom !wp -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/result?result=$(1))
+```
+```
 !addcom !wpredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/result?result=$(1))
+```
+```
 !addcom !resultpredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/result?result=$(1))
+```
+```
 !addcom !rpredict -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/result?result=$(1))
+```
+```
 !addcom !rp -cd=5 -ul=mod $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/result?result=$(1))
+```
 Usage: !wpredict 13-10
 
 ## For Assigned Twitch Channel Prediction Admins (No other access like Twitch Channel Mods)
 ### Force adding an user's prediction when Prediction has been closed!
+```
 !addcom !fadminpredict -cd=5 $(urlfetch https://prediction-api.kyroskoh.repl.co/prediction/$(channel)/addByAdmins?admins=$(user)&username=$(1)&prediction=$(2))
+```
 Usage: !fadminpredict NightBot 13-9
 
 </details>
