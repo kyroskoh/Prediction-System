@@ -7,6 +7,7 @@ https://prediction-api.kyroskoh.repl.co/
 # Live Site Demo
 https://www.twitch.tv/sherrng
 
+# API Endpoints
 <details>
 <summary>API Endpoints</summary>
 
@@ -51,6 +52,7 @@ https://www.twitch.tv/sherrng
 
 </details>
 
+# NightBot Commands
 <details>
 <summary>NightBot Commands (Add via your Twitch Chat)</summary>
 
@@ -139,6 +141,7 @@ Usage: !fadminpredict NightBot 13-9
 
 </details>
 
+# Commands in Live Site
 <details>
 <summary>Commands in Live Site</summary>
 
