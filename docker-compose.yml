@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  prediction-system:
+    build: .
+    container_name: prediction-system-api
+    restart: unless-stopped
+    ports:
+      - "6000:6000"
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb://mongo:27017/prediction-system
+      - JWT_SECRET=your-super-secure-jwt-secret-change-this
+      - PORT=6000
+    depends_on:
+      - mongo
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - prediction-network
+
+  mongo:
+    image: mongo:6.0-focal
+    container_name: prediction-system-db
+    restart: unless-stopped
+    environment:
+      - MONGO_INITDB_DATABASE=prediction-system
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+      - ./mongo-init:/docker-entrypoint-initdb.d
+    networks:
+      - prediction-network
+
+  mongo-express:
+    image: mongo-express:latest
+    container_name: prediction-system-mongo-ui
+    restart: unless-stopped
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=mongo
+      - ME_CONFIG_MONGODB_PORT=27017
+      - ME_CONFIG_BASICAUTH_USERNAME=admin
+      - ME_CONFIG_BASICAUTH_PASSWORD=admin123
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongo
+    networks:
+      - prediction-network
+
+volumes:
+  mongo_data:
+    driver: local
+
+networks:
+  prediction-network:
+    driver: bridge

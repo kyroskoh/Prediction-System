@@ -4,8 +4,17 @@
   "description": "Prediction System for CS2 & Valorant of max score of 13.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-	"start": "node index.js"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:integration": "jest --testPathPattern=integration",
+    "lint": "eslint src/ tests/",
+    "docker:build": "docker build -t prediction-system .",
+    "docker:run": "docker-compose up -d",
+    "docker:stop": "docker-compose down",
+    "db:seed": "node scripts/seed-database.js"
   },
   "repository": {
     "type": "git",
@@ -39,7 +48,23 @@
   },
   "homepage": "https://github.com/kyroskoh/prediction-system#readme",
   "dependencies": {
+    "bcryptjs": "^3.0.2",
     "body-parser": "^1.20.2",
-    "express": "^4.18.2"
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^4.18.2",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "jest": "^30.1.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.1",
+    "nodemon": "^3.1.10",
+    "socket.io": "^4.8.1",
+    "supertest": "^7.1.4",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^10.2.1",
+    "tslib": "^2.8.1"
   }
 }
